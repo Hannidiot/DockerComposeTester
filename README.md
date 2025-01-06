@@ -2,6 +2,11 @@
 
 This is a simple demo project showing how to use Docker Compose with a Node.js backend, React frontend, and Nginx reverse proxy.
 
+## Concolusions
+
+1. How to run a standalone frontend project with docker: build frontend and run it with nginx
+2. How to run frontend and backend in one docker compose file: use another nginx container to proxy the requests
+
 ## Project Structure
 
 - `app/` - Node.js backend
@@ -17,6 +22,10 @@ This is a simple demo project showing how to use Docker Compose with a Node.js b
 
 ```bash
 docker-compose up --build
+docker-compose down
+
+docker rmi docker-tester-backend:latest
+docker rmi docker-tester-frontend:latest
 ```
 
 The application will be available at:
